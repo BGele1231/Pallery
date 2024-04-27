@@ -1,0 +1,138 @@
+.naming{
+    font-family: "Play", sans-serif;
+}
+.bold-c{
+    font-weight: 5;
+}
+.coloring{
+    background-color: #FFFFFF;
+}
+#hn{
+    background-color: #FFFFFF;
+}
+#fn{
+    background-color: black;
+}
+.invers-nav-text-c{
+    --bs-emphasis-color-rgb: white;
+    color: #FFFFFF;
+    --bs-navbar-brand-color: rgba(white, 1);
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-body-color: white;
+    font-size: 1rem;;
+}
+.nav-text-c{
+    color: black;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-c{
+    --bs-body-color: black;
+    --bs-border-color: black;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+.content {
+    flex: 1 0 auto;
+}
+footer{
+    flex: 0 0 auto;
+}
+
+body{
+    background-image: url("../static/web_pict/background-eff.png");
+    
+  /* задает стартовое положение изображения на странице */
+  background-position: center center;
+  /* определяет размер изображения на странице */
+  background-size: cover;
+  /* свойство устанавливает, будет ли повторяться изображение и каким образом */
+  background-repeat: no-repeat;
+  /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+  вместе с остальной частью страницы или будет фиксированным */
+  background-attachment: fixed;
+
+}
+
+.card-c{
+    --bs-body-bg: #88A6FF;
+    --bs-border-width: 0px;
+    margin-top: 10vw;
+
+}
+.card-title-c{
+    margin: 5%;
+    font-size: 3.25rem;
+    color: white;
+    --bs-card-title-color: white;
+}
+.card-text-c{
+    margin: 5%;
+    font-size: 1.25rem;
+    color: white;
+}
+#btn-c-public{
+    margin: 5%;
+    width: 90%;
+    --bs-btn-bg: #557CF2;
+    background-color: var(--bs-btn-bg);
+    color: white;
+    font-size: 1.25rem;
+}
+.btn-rc{
+    background-color: #557CF2;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin-left: 70%; 
+}
+.main-screen{
+    display: grid;
+    height: 100vh;
+}
+#projects{
+    position:static;
+    left: 0;
+    padding: 1%;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+#project-title{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.project-card{
+    height: 30%;
+    --bs-border-color-translucent: black;
+    background-size: cover;
+}
+.card-body{
+    margin: 5%;
+}
+.card-body-c{
+    margin-top: 60%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-right: -1%;
+    border-radius: 10px;
+    background-color: #88A6FF;
+}
+.card-img-top{
+    border-radius: 1rem;
+    margin: 5%;
+}
+.card-title{
+    margin: 1%;
+    margin-bottom: 5px;
+    color: white;
+    --bs-card-title-color: white;
+}
