@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+
+<div class="container-xl content naming">
+    <div class="main-screen">
+        <div class="card card-c" style="width: 25rem; height: 28rem">
+            <div class="card-body">
+              <h5 class="card-title card-title-c">Расскажи о своём проекте</h5>
+              <p class="card-text card-text-c">ПАЛЛЕРИЯ - Коммьюнити активистов из технопарка.
+                Стань частью истории!</p>
+              <a href="#" class="btn" id="btn-c-public">Опубликовать</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="projects">
+        <div class="container-xl">
+            <h5 id="project-title" style="font-size: 2rem;">Проекты</h5>
+            <div class="row">
+{% for item in projects%}
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <div class="card project-card" style="height: 23rem; background-image: url({% item.image_url %});">
+                    <div class="card-body card-body-c">
+                      <h5 class="card-title">{% item.title %}</h5>
+                      <div style="height: 1rem; width: 1rem;"></div>
+                      <a href="#" class=" btn-rc">Узнать больше</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+        </div>
+    </div>
+{% endblock %}
