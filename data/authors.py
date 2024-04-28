@@ -8,5 +8,5 @@ authors_table = sqlalchemy.Table(
     sqlalchemy.Column('projects', sqlalchemy.Integer,
                       sqlalchemy.ForeignKey('projects.id')),
     sqlalchemy.Column('users', sqlalchemy.Integer,
-                      sqlalchemy.ForeignKey('user.id'))
+                      sqlalchemy.ForeignKey('users.id'))
 )

@@ -1,10 +1,11 @@
 import flask
+import sqlalchemy
 from flask import jsonify, make_response, request
 from . import db_session
 from .projects import Projects
 
 blueprint = flask.Blueprint(
-    'news_api',
+    'projects_api',
     __name__,
     template_folder='templates'
 )
@@ -23,8 +24,8 @@ def get_news():
     )
 
 
-@blueprint.route('/api/projects/<int:news_id>', methods=['GET'])
-def get_one_news(projects_id):
+@blueprint.route('/api/projects/<int:projects_id>', methods=['GET'])
+def get_one_project(projects_id):
     db_sess = db_session.create_session()
     projects = db_sess.query(Projects).get(projects_id)
     if not projects:
@@ -32,14 +33,13 @@ def get_one_news(projects_id):
     return jsonify(
         {
             'projects': projects.to_dict(only=(
-                'title', 'annotation', 'image_url', 'docs_url')),
-            'users': projects['authors_users'].to_dict(only=('name', 'surname'))
+                'title', 'annotation', 'image_url', 'docs_url', 'authors_users')),
         }
     )
 
 
-@blueprint.route('/api/news/<int:news_id>', methods=['DELETE'])
-def delete_news(projects_id):
+@blueprint.route('/api/projects/<int:projects_id>', methods=['DELETE'])
+def delete_project(projects_id):
     db_sess = db_session.create_session()
     projects = db_sess.query(Projects).get(projects_id)
     if not projects:

@@ -14,8 +14,8 @@ class Projects(SqlAlchemyBase, SerializerMixin):
                            primary_key=True, autoincrement=True)
     title = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     image_url = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    annotation = sqlalchemy.Column(LONGTEXT, nullable=True)
+    annotation = sqlalchemy.Column(sqlalchemy.TEXT, nullable=True)
     created_date = sqlalchemy.Column(sqlalchemy.DateTime,
                                      default=datetime.datetime.now)
     docs_url = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    authors_users = orm.relationship("Users", secondary="authors", backref="projects")
+    authors_users = orm.relationship("User", secondary="authors_table", back_populates='projects')

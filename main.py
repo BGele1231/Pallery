@@ -25,15 +25,11 @@ def load_user(user_id):
 @app.route("/index")
 def index():
     db_sess = db_session.create_session()
-    if current_user.is_authenticated:
-        projects = db_sess.query(Projects).filter(
-            (Projects.user == current_user) | (Projects.is_private != True))
-    else:
-        projects = db_sess.query(Projects).filter(Projects.is_private != True)
-    return render_template("index.html", news=projects)
+    projects = db_sess.query(Projects)
+    return render_template("index.html", title='Pallery', projects=projects)
 
 
-@app.route('/news/<int:id>', methods=['GET', 'POST'])
+"""@app.route('/news/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_news(id):
     form = NewsForm()
@@ -147,12 +143,6 @@ def cookie_test():
     return res
 
 
-def main():
-    db_session.global_init("db/blogs.db")
-    app.register_blueprint(news_api.blueprint)
-    app.run()
-
-
 def test_orm_user():
     db_session.global_init("db/blogs.db")
     from data.users import User
@@ -190,7 +180,13 @@ def reqister():
         db_sess.add(user)
         db_sess.commit()
         return redirect('/login')
-    return render_template('register.html', title='Регистрация', form=form)
+    return render_template('register.html', title='Регистрация', form=form)"""
+
+
+def main():
+    db_session.global_init("db/projects_h.db")
+    app.register_blueprint(projects_api.blueprint)
+    app.run()
 
 
 @app.errorhandler(404)
