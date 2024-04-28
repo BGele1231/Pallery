@@ -26,7 +26,8 @@ def load_user(user_id):
 def index():
     db_sess = db_session.create_session()
     projects = db_sess.query(Projects)
-    return render_template("index.html", title='Pallery', projects=projects)
+    return render_template("index.html", title='Pallery', projects=projects,
+                           image='../static/web_pict/background-eff.png')
 
 
 """@app.route('/news/<int:id>', methods=['GET', 'POST'])
@@ -155,32 +156,34 @@ def test_orm_user():
     db_sess.add(user)
     db_sess.commit()
     for user in db_sess.query(User).all():
-        print(user)
+        print(user)"""
 
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/registration', methods=['GET', 'POST'])
 def reqister():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
-            return render_template('register.html', title='Регистрация',
+            return render_template('registration.html', title='Registration - Pallery',
                                    form=form,
                                    message="Пароли не совпадают")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.email == form.email.data).first():
-            return render_template('register.html', title='Регистрация',
+            return render_template('registration.html', title='Registration - Pallery',
                                    form=form,
                                    message="Такой пользователь уже есть")
         user = User(
             name=form.name.data,
+            surname=form.surname.data,
             email=form.email.data,
-            about=form.about.data
+            social_network=form.social_network.data,
+            scientific_mentor=form.scientific_mentor.data
         )
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()
         return redirect('/login')
-    return render_template('register.html', title='Регистрация', form=form)"""
+    return render_template('registration.html', title='Registration - Pallery', form=form)
 
 
 def main():

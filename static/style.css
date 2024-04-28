@@ -40,11 +40,12 @@
     flex: 1 0 auto;
 }
 footer{
+    background-color: #3B3B3B;
     flex: 0 0 auto;
 }
 
 body{
-    background-image: url("../static/web_pict/background-eff.png");
+   
     
   /* задает стартовое положение изображения на странице */
   background-position: center center;
@@ -59,9 +60,10 @@ body{
 }
 
 .card-c{
-    --bs-body-bg: #88A6FF;
+    --bs-body-bg: #9CB0EB;
     --bs-border-width: 0px;
     margin-top: 10vw;
+    border-radius: 5%;
 
 }
 .card-title-c{
@@ -124,7 +126,7 @@ body{
     margin-bottom: 5%;
     margin-right: -1%;
     border-radius: 10px;
-    background-color: #88A6FF;
+    background-color: #9CB0EB;
 }
 .card-img-top{
     border-radius: 1rem;
@@ -135,4 +137,24 @@ body{
     margin-bottom: 5px;
     color: white;
     --bs-card-title-color: white;
+}
+.form-c{
+    background-color: #9CB0EB;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 80vh;
+    height: 100%;
+    border-radius: 5%;
+    margin-bottom: 5%;
+}
+#white-form{
+    background-color: #FFFFFF;
+    background-image: none;
+}   
+.form-sizing{
+    width: 70%;
+    height: 90%;
+    margin: auto;
 }

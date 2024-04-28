@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05af4a7-dc98-4bba-85b0-b26f448eb5e5" name="Changes" comment="index form not working main commit">
-      <change afterPath="$PROJECT_DIR$/db/projects_h.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/web_pict/logo.png" afterDir="false" />
+    <list default="true" id="d05af4a7-dc98-4bba-85b0-b26f448eb5e5" name="Changes" comment="index shows a bit working main commit">
+      <change afterPath="$PROJECT_DIR$/templates/project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/authors.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/authors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/projects.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/projects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/projects_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/projects_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714217340821</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="index shows a bit working main commit">
+      <option name="closed" value="true" />
+      <created>1714264872194</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714264872194</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +153,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="base commit" />
     <MESSAGE value="index form not working main commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="index form not working main commit" />
+    <MESSAGE value="index shows a bit working main commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="index shows a bit working main commit" />
   </component>
 </project>
