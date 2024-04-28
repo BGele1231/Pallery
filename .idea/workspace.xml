@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05af4a7-dc98-4bba-85b0-b26f448eb5e5" name="Changes" comment="registration with template project commit">
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+    <list default="true" id="d05af4a7-dc98-4bba-85b0-b26f448eb5e5" name="Changes" comment="login with template project commit">
+      <change afterPath="$PROJECT_DIR$/static/saving.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/saving.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714274434824</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="login with template project commit">
+      <option name="closed" value="true" />
+      <created>1714295887164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714295887164</updated>
+    </task>
+    <task id="LOCAL-00006" summary="login with template project commit">
+      <option name="closed" value="true" />
+      <created>1714295895653</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714295895653</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +178,7 @@
     <MESSAGE value="index form not working main commit" />
     <MESSAGE value="index shows a bit working main commit" />
     <MESSAGE value="registration with template project commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration with template project commit" />
+    <MESSAGE value="login with template project commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="login with template project commit" />
   </component>
 </project>
