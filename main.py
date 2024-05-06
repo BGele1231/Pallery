@@ -6,6 +6,7 @@ from forms.user import RegisterForm
 from flask_login import LoginManager, login_user, current_user, login_required, logout_user
 from forms.autorization import LoginForm
 import datetime
+from forms.create_project import CreateForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'pallery_secret_key'
 app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(
@@ -30,90 +31,13 @@ def index():
                            image='../static/web_pict/background-eff.png')
 
 
-"""@app.route('/news/<int:id>', methods=['GET', 'POST'])
-@login_required
-def edit_news(id):
-    form = NewsForm()
-    if request.method == "GET":
-        db_sess = db_session.create_session()
-        news = db_sess.query(News).filter(News.id == id,
-                                          News.user == current_user
-                                          ).first()
-        if news:
-            form.title.data = news.title
-            form.content.data = news.content
-            form.is_private.data = news.is_private
-        else:
-            abort(404)
-    if form.validate_on_submit():
-        db_sess = db_session.create_session()
-        news = db_sess.query(News).filter(News.id == id,
-                                          News.user == current_user
-                                          ).first()
-        if news:
-            news.title = form.title.data
-            news.content = form.content.data
-            news.is_private = form.is_private.data
-            db_sess.commit()
-            return redirect('/')
-        else:
-            abort(404)
-    return render_template('news.html',
-                           title='Редактирование новости',
-                           form=form
-                           )
-
-
-
-
-
+"""
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect("/")
-
-
-@app.route('/news',  methods=['GET', 'POST'])
-@login_required
-def add_news():
-    form = NewsForm()
-    if form.validate_on_submit():
-        db_sess = db_session.create_session()
-        news = News()
-        news.title = form.title.data
-        news.content = form.content.data
-        news.is_private = form.is_private.data
-        current_user.news.append(news)
-        db_sess.merge(current_user)
-        db_sess.commit()
-        return redirect('/')
-    return render_template('news.html', title='Добавление новости',
-                           form=form)
-
-
-@app.route('/news_delete/<int:id>', methods=['GET', 'POST'])
-@login_required
-def news_delete(id):
-    db_sess = db_session.create_session()
-    news = db_sess.query(News).filter(News.id == id,
-                                      News.user == current_user
-                                      ).first()
-    if news:
-        db_sess.delete(news)
-        db_sess.commit()
-    else:
-        abort(404)
-    return redirect('/')
-
-
-@app.route("/session_test")
-def session_test():
-    visits_count = session.get('visits_count', 0)
-    session['visits_count'] = visits_count + 1
-    session['permament'] = True
-    return make_response(
-        f"Вы пришли на эту страницу {visits_count + 1} раз")
+"""
 
 
 @app.route("/cookie_test")
@@ -133,7 +57,7 @@ def cookie_test():
 
 
 def test_orm_user():
-    db_session.global_init("db/blogs.db")
+    db_session.global_init("db/projects_h.db")
     from data.users import User
     db_sess = db_session.create_session()
     user = User()
@@ -144,8 +68,43 @@ def test_orm_user():
     db_sess.add(user)
     db_sess.commit()
     for user in db_sess.query(User).all():
-        print(user)"""
+        print(user)
 
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route("/create", methods=['GET', 'POST'])
+def create():
+    form = CreateForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        projects = Projects()
+        projects.title = form.title.data
+        projects.annotation = form.annotation.data
+        current_user.projects.append(projects)
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('create.html', title='Добавление проекта', form=form)
+
+
+"""@app.route('/projectss_delete/<int:id>', methods=['GET', 'POST'])
+@login_required
+def news_delete(id):
+    db_sess = db_session.create_session()
+    news = db_sess.query(Projects).filter(Projects.id == id,
+                                      Projects.user == current_user
+                                      ).first()
+    if projects:
+        db_sess.delete(projects)
+        db_sess.commit()
+    else:
+        abort(404)
+    return redirect('/')
+"""
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -203,6 +162,7 @@ def not_found(error):
 @app.errorhandler(400)
 def bad_request(_):
     return make_response(jsonify({'error': 'Bad Request'}), 400)
+
 
 if __name__ == '__main__':
     main()
