@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d05af4a7-dc98-4bba-85b0-b26f448eb5e5" name="Changes" comment="login with template, but without functions project commit">
-      <change afterPath="$PROJECT_DIR$/forms/create_project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects_h.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d05af4a7-dc98-4bba-85b0-b26f448eb5e5" name="Changes" comment="html files of design">
+      <change afterPath="$PROJECT_DIR$/templates/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/projects_h.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/projects_h.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,8 +46,8 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="9ba82563-5f84-4d9e-a140-37242ff3ec0b" />
-        <option name="url" value="https://github.com/BGele1231/Pallery.git" />
+        <option name="accountId" value="4cd52537-303c-41bb-9169-a5a10f16516a" />
+        <option name="url" value="https://github.com/BGele1231/Pallery" />
       </UrlAndAccount>
     </option>
   </component>
@@ -180,7 +181,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714893032307</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="login with template, public projects with login">
+      <option name="closed" value="true" />
+      <created>1714995954586</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714995954586</updated>
+    </task>
+    <task id="LOCAL-00009" summary="html files of design">
+      <option name="closed" value="true" />
+      <created>1714996018184</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714996018184</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +231,8 @@
     <MESSAGE value="registration with template project commit" />
     <MESSAGE value="login with template project commit" />
     <MESSAGE value="login with template, but without functions project commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="login with template, but without functions project commit" />
+    <MESSAGE value="login with template, public projects with login" />
+    <MESSAGE value="html files of design" />
+    <option name="LAST_COMMIT_MESSAGE" value="html files of design" />
   </component>
 </project>

@@ -31,15 +31,6 @@ def index():
                            image='../static/web_pict/background-eff.png')
 
 
-"""
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect("/")
-"""
-
-
 @app.route("/cookie_test")
 def cookie_test():
     visits_count = int(request.cookies.get("visits_count", 0))
@@ -50,7 +41,7 @@ def cookie_test():
                        max_age=60 * 60 * 24 * 365 * 2)
     else:
         res = make_response(
-            "Вы пришли на эту страницу в первый раз за последние 2 года")
+            "Вы пришли на эту страницу в первый раз за последние 2 месяца")
         res.set_cookie("visits_count", '1',
                        max_age=60 * 60 * 24 * 365 * 2)
     return res
@@ -76,6 +67,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
+
+
 @app.route("/create", methods=['GET', 'POST'])
 def create():
     form = CreateForm()
@@ -84,6 +80,8 @@ def create():
         projects = Projects()
         projects.title = form.title.data
         projects.annotation = form.annotation.data
+        projects.image_url = form.image_url.data
+        projects.docs_url = form.docs_url.data
         current_user.projects.append(projects)
         db_sess.merge(current_user)
         db_sess.commit()
@@ -91,11 +89,15 @@ def create():
     return render_template('create.html', title='Добавление проекта', form=form)
 
 
-"""@app.route('/projectss_delete/<int:id>', methods=['GET', 'POST'])
-@login_required
-def news_delete(id):
+@app.route("/project", methods=['GET', 'POST'])
+def about_the_same_project():
+    return render_template('project.html')
+
+
+@app.route('/projectss_delete/<int:id>', methods=['GET', 'POST'])
+def projects_delete(id):
     db_sess = db_session.create_session()
-    news = db_sess.query(Projects).filter(Projects.id == id,
+    projects = db_sess.query(Projects).filter(Projects.id == id,
                                       Projects.user == current_user
                                       ).first()
     if projects:
@@ -104,7 +106,7 @@ def news_delete(id):
     else:
         abort(404)
     return redirect('/')
-"""
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

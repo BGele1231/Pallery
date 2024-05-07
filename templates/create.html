@@ -22,6 +22,24 @@
             </p>
         {% endfor %}
     </p>
+    <p>
+        {{ form.image_url.label }}<br>
+        {{ form.image_url(class="form-control") }}<br>
+        {% for error in form.image_url.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.docs_url.label }}<br>
+        {{ form.docs_url(class="form-control") }}<br>
+        {% for error in form.docs_url.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
     <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
     {{message}}
 </form>
